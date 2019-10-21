@@ -20,4 +20,6 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
   $router->post('login', 'AuthController@login');
   $router->get('profile', 'UserController@profile');
+
+  $router->post('notes', 'NoteController@create');
 });

@@ -13,6 +13,11 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 {
   use Authenticatable, Authorizable;
 
+  public function notes()
+  {
+    return $this->hasMany('App\Note');
+  }
+
   /**
    * The attributes that are mass assignable.
    *
